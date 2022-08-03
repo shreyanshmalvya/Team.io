@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Teams</title>
+    <link rel="stylesheet" type="text/css" href="" />
+    <script>
+      //send delete request to api with id from button click
+      function deleteTeam(id) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("DELETE", "/api/team/" + id, true);
+        xhr.send();
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="team data">
+      <table>
+        <% data.forEach(function(team) { %>
+        <tr>
+          <td><%= team.id %></td>
+          <td><%= team.name %></td>
+          <td><%= team.city %></td>
+          <td><%= team.state %></td>
+          <td><%= team.championships %></td>
+          <td><%= team.years_in_leauge %></td>
+          <td><%= team.years_in_team %></td>
+          <td><a href="/team-details/<%= team.id %>">Get Details</a></td>
+          <td><button onclick="deleteTeam(<%= team.id %>)">Delete</button></td>
+        </tr>
+        <% }); %>
+      </table>
+    </div>
+
+    <div>
+      <a href="/add-team"><button>Add Team</button></a>
+      <a href="/update-team"><button>Update Team</button></a>
+    </div>
+  </body>
+</html>

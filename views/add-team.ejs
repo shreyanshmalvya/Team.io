@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>Teams</title>
+      <link rel="stylesheet" type = "text/css" href="">
+   </head>
+   <body>
+      <div class="">
+         <form id="Add Team" method = "POST" action = "/api/team">
+            <label for="id">ID for Team</label>
+            <input type="number" id="id" name="id"></br></br>
+            <label for="Name">Name of Team</label>
+            <input type="text" id="name" name="name"></br></br>
+            <label for="city">Name of City</label>
+            <input type="text" id="cityname" name="city"> </br></br>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state"></br></br>
+            <label for="championships">Championships</label>
+            <input type="number" id="championships" name="championships"></br></br>
+            <label for="years_in_leauge">Years in Leauge</label>
+            <input type="number" id="years_in_leauge" name="years_in_leauge"></br></br>
+            <label for="years_in_team">Years in Team</label>
+            <input type="number" id="years_in_team" name="years_in_team"></br></br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+         </form>
+         <a href = "/team"><button>Back to Teams Page</button></a>
+      </div>
+   </body>
+</html>
